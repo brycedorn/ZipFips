@@ -1,4 +1,5 @@
 require 'rspec'
-require 'zipfips/version'
+require 'pry'
+require 'zipfips'
 
-include Zipfips
+include ZipFips

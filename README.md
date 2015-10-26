@@ -6,15 +6,16 @@
 
 ## Description
 
-TODO: Description
-
-## Features
+Convert between ZIP codes and FIPS codes.
 
 ## Examples
 
     require 'zipfips'
 
-## Requirements
+    ZF ||= ZipFips::Handler.new
+
+    ZF.to_zip(12345) = 36093
+    ZF.to_zip(36093) = 12345
 
 ## Install
 

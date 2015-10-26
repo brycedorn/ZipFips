@@ -6,7 +6,7 @@ require 'zipfips/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "zipfips"
-  gem.version       = Zipfips::VERSION
+  gem.version       = ZipFips::VERSION
   gem.summary       = %q{TODO: Summary}
   gem.description   = %q{TODO: Description}
   gem.license       = "MIT"
