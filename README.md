@@ -11,12 +11,10 @@ Easily convert between ZIP codes and FIPS codes
 
     require 'zipfips'
 
-    ZF ||= ZipFips::Handler.new
+    12345.to_fips #=> 36093
+    36093.to_zip  #=> 12345
 
-    ZF.to_fips(12345) #=> 36093
-    ZF.to_zip(36093)  #=> 12345
-
-    ZF.convert(36093) #=> 12345
+    36093.zipfips #=> 12345
 
 ## Install
 
