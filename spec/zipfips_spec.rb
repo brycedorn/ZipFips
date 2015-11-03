@@ -1,20 +1,24 @@
 require 'spec_helper'
 
 describe ZipFips do
-  before do
-    ZF ||= ZipFips::Handler.new
-  end
+  zip = 12345
+  fips = 36093
 
   it "should return the proper FIPS code for a ZIP code" do
-    expect(ZF.to_fips(12345)).to eq(36093)
+    expect(zip.to_fips).to eq(fips)
   end
 
   it "should return the proper ZIP code for a FIPS code" do
-    expect(ZF.to_zip(36093)).to eq(12345)
+    expect(fips.to_zip).to eq(zip)
   end
 
   it "should automatically convert between the two" do
-    expect(ZF.convert(36093)).to eq(12345)
-    expect(ZF.convert(12345)).to eq(36093)
+    expect(fips.zipfips).to eq(zip)
+    expect(zip.zipfips).to eq(fips)
+  end
+
+  it "should work for strings or numbers" do
+    expect(zip.to_fips).to eq(fips)
+    expect(zip.to_s.to_fips).to eq(fips)
   end
 end
