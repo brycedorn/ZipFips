@@ -7,8 +7,8 @@ require 'zipfips/version'
 Gem::Specification.new do |gem|
   gem.name          = "zipfips"
   gem.version       = ZipFips::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.summary       = "Easily convert between ZIP codes and FIPS codes"
+  gem.description   = "FIPS to ZIP and ZIP to FIPS"
   gem.license       = "MIT"
   gem.authors       = ["Bryce Dorn"]
   gem.email         = "brycedorn@gmail.com"
