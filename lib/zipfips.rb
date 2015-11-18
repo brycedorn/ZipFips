@@ -3,11 +3,11 @@ require 'json'
 module ZipFips
 
   def is_zip?
-    !!fips_hash[self.to_s] && !is_fips?
+    !!fips_hash[self.to_i.to_s] && !is_fips?
   end
 
   def is_fips?
-    !!zips_hash[self.to_s]
+    !!zips_hash[self.to_i.to_s]
   end
 
   def zipfips
@@ -15,11 +15,11 @@ module ZipFips
   end
 
   def to_zip
-    zips_hash[self.to_s].to_i
+    zips_hash[self.to_i.to_s].to_i
   end
 
   def to_fips
-    fips_hash[self.to_s].to_i
+    fips_hash[self.to_i.to_s].to_i
   end
 
   private
